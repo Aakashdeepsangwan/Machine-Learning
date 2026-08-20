@@ -1,0 +1,10 @@
+Why to use Normalised form to apply ML model ?
+- Every feature get to contribute fairly (Same Scale)
+- One feature in Thousands(income), in tens (age), in this case the large-scale feature dominates
+- Basically, normalisation puts the features on comparable scale
+
+
+*** Standarization and Normalisation are two different things, but have same purpose ***
+- Standarization (Z-Score) : Mean = 0 , Standard Deviation = 1
+- Normalisation (min-max scaling) : Put each feature in the same scale
+- For K-Mean Clusturing Standarization is used 
