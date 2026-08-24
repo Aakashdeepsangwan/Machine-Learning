@@ -8,3 +8,29 @@ Why to use Normalised form to apply ML model ?
 - Standarization (Z-Score) : Mean = 0 , Standard Deviation = 1
 - Normalisation (min-max scaling) : Put each feature in the same scale
 - For K-Mean Clusturing Standarization is used 
+
+
+
+K Mean++ [Optimal Technique] workflow
+- Choose the first centriod at random
+- pick up the next one with probability proportional to its squared distance
+  from the nearest already chosen centriod
+- probability = (Distance from that particular point to centriod)/ Sum(Distance of each point to that centriod)
+- It's a probabilistic Algorithm not an deterministic
+
+
+Applying K-Mean Clusturing on Kaggle Dataset
+- we can skip train-test split, cause this is Clusturing, not prediction 
+- K-means has no target column Y, there is nothing to predict and check against
+- so basically we are summarizing this dataset using Unsupervised learning algo
+- Elbow, silhouette and clustur are computed in the same points we clustur
+
+- silhouette Score : measures how well each points fits inside it's own clustur as compare to it's next closest cluster
+- It's fixes the problem that WCSS has, cause it's Keep on decreasing as K increases 
+- So WCSS can't tell specifically when to stop adding the clustures
+- **** It doesn't alway improve with more clusters
+- Splitting a cluster that is already well-seperated will actually lower silhouette score 
+- a(i) stays same as (Intra euclidian distance) and b(i) shrinks as clusters get artifically small
+- This basically means we can pick highest silhouette score directly
+
+
