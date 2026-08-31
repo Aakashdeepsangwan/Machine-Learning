@@ -1,0 +1,32 @@
+- Reducing the dimensionality of your training set before training a model will usually speed up training
+but it many not always lead to a better or simpler solution ; it all depends on the dataset
+- Effective when the dataset is small relative to the number of features, especially if it's noisy
+  or many features are highly correlated to one another
+
+- Principle Component : Identifies the axis that hasthe largest amount of variance in the
+  training set. Also find the second axis orthogonal to the first one, that contains
+  the largest amount of remaining variance
+
+- How to find the Principle Component : By applying Standard Matrix Factorization 
+  Technique called Singular Value Decomposition
+- Once we have identified all the principle components we can reduce the dimensionality 
+  of dataset down to d dimensions by projectiong it onto the hyperplane
+
+  
+--> Where to use 
+1) High Feature to sample ratio (20 k geners - 200 people)
+2) Highly correlated/ redundant features
+3) Speeding up training of large datasets
+4) Visualisation of High dimensionality data
+5) Noise Reduction 
+
+
+
+Encoding 
+- Label Encoding 
+- One Hot Encoder 
+- Ordinal Encoder
+
+** Interviewer mainly wanted to ask what kind of Encoding I should apply when we have the colours
+such as red, green, black and white - right approach here is One-Hot Encoder as we don't "Order Form"
+
